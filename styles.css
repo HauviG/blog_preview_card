@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: Figtree, sans-serif;
+  color: var(--Gray_950);
+}
+
+/* ======== */
+
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Gray_500: hsl(0, 0%, 42%);
+  --Gray_950: hsl(0, 0%, 7%);
+
+  --300: 24px;
+  --150: 12px;
+  --100: 8px;
+  --50: 4px;
+}
+
+/* ====== */
+
+/* main */
+
+body {
+  display: flex;
+  background-color: var(--Yellow);
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  max-width: 24rem;
+  background-color: var(--White);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 8px 8px 0px 0px var(--Gray_950);
+  padding: 1.5rem;
+  border: 1px solid var(--Gray_950);
+}
+
+.blog_img img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 12.5rem;
+}
+
+/* content text */
+
+.blog_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--150);
+  padding: 1.5rem 0;
+}
+
+.learn {
+  font-size: 0.875rem;
+  background-color: var(--Yellow);
+  padding: 0.25rem 0.75rem;
+  width: fit-content;
+  border-radius: 4px;
+  font-weight: 800;
+}
+
+.blog_content p {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.blog_content h1 {
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.blog_content h1:hover {
+  color: var(--Yellow);
+}
+
+.blog_content {
+  .blog_text_main {
+    font-size: 1rem;
+    color: var(--Gray_500);
+  }
+}
+
+/* author section*/
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--150);
+}
+
+.author img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.author p {
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+/* footer */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  font-weight: bold;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .content {
+    max-width: 20.4375rem;
+  }
+  .learn {
+    font-size: 0.75rem;
+  }
+  .blog_content p {
+    font-size: 0.75rem;
+  }
+  .blog_content h1 {
+    font-size: 1.25rem;
+  }
+  .blog_content {
+    .blog_text_main {
+      font-size: 0.875rem;
+    }
+  }
+  .blog_content h1:hover {
+    color: var(--Gray_950);
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .wrapper {
+    padding: 0 var(--150);
+  }
+}
